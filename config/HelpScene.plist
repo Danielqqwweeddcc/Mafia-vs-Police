@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>closeButtonPosition</key>
+	<string>{305, 465}</string>
+	<key>imageOffsetPosition</key>
+	<string>{-105, 0}</string>
+	<key>itemsPositions</key>
+	<array>
+		<string>{160, 390}</string>
+		<string>{160, 290}</string>
+		<string>{160, 190}</string>
+		<string>{160, 90}</string>
+	</array>
+	<key>pagesIndicatorPosition</key>
+	<string>{160, 450}</string>
+	<key>textFieldSize</key>
+	<string>{200, 70}</string>
+	<key>textOffsetPosition</key>
+	<string>{40, 0}</string>
+</dict>
+</plist>

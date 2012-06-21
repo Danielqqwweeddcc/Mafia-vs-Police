@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>current</key>
+	<string>bandit</string>
+	<key>themes</key>
+	<array>
+		<dict>
+			<key>image</key>
+			<string>money_theme.jpg</string>
+			<key>item</key>
+			<string>money</string>
+			<key>name</key>
+			<string>Money solve all problems</string>
+			<key>open</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>image</key>
+			<string>bandit_theme.jpg</string>
+			<key>item</key>
+			<string>bandit</string>
+			<key>name</key>
+			<string>Gangsters</string>
+			<key>open</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>image</key>
+			<string>police_theme.jpg</string>
+			<key>item</key>
+			<string>policeman</string>
+			<key>name</key>
+			<string>Cops</string>
+			<key>open</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>image</key>
+			<string>prison_theme.jpg</string>
+			<key>item</key>
+			<string>prison</string>
+			<key>name</key>
+			<string>Prison Life</string>
+			<key>open</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>image</key>
+			<string>girls_theme.jpg</string>
+			<key>item</key>
+			<string>girl</string>
+			<key>name</key>
+			<string>Girls like Rest</string>
+			<key>open</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>image</key>
+			<string>fbi_theme.jpg</string>
+			<key>item</key>
+			<string>fbi</string>
+			<key>name</key>
+			<string>At the FBI's hook</string>
+			<key>open</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>image</key>
+			<string>family_theme.jpg</string>
+			<key>item</key>
+			<string>family</string>
+			<key>name</key>
+			<string>Welcome to the Family!</string>
+			<key>open</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>image</key>
+			<string>chief_theme.jpg</string>
+			<key>item</key>
+			<string>chief</string>
+			<key>name</key>
+			<string>the Cop Number One</string>
+			<key>open</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>image</key>
+			<string>casino_theme.jpg</string>
+			<key>item</key>
+			<string>casino</string>
+			<key>name</key>
+			<string>Big stakes</string>
+			<key>open</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>image</key>
+			<string>father_theme.jpg</string>
+			<key>item</key>
+			<string>godfather</string>
+			<key>name</key>
+			<string>The Godfather</string>
+			<key>open</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>image</key>
+			<string>hell_theme.jpg</string>
+			<key>item</key>
+			<string>hell</string>
+			<key>name</key>
+			<string>Hell</string>
+			<key>open</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>image</key>
+			<string>heaven_theme.jpg</string>
+			<key>item</key>
+			<string>heaven</string>
+			<key>name</key>
+			<string>Heaven</string>
+			<key>open</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>image</key>
+			<string>inian_theme.jpg</string>
+			<key>item</key>
+			<string>inian</string>
+			<key>name</key>
+			<string>In Yan</string>
+			<key>open</key>
+			<false/>
+		</dict>
+	</array>
+</dict>
+</plist>

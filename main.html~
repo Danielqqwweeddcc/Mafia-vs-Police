@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <title> Mafia vs Police </title>
+
+  <canvas id="playGround" style="border: 1px solid;"  width="600" height="800"> </canvas>
+  <script>
+        // Load image
+        var pic_back = new Image();
+        pic_back.src = "./pic/bandit_theme-ipad.jpg";
+        var pic_token = new Image();
+        pic_token.src = "./pic/GameSceneAtlas.png";
+
+        var pic_token1 = new Image();
+        pic_token1.src = "./pic/GameSceneAtlas.png";
+
+        // Once the image is loaded, draw on the canvas
+        pic_back.onload = function () {
+            var canvas = document.getElementById('playGround');
+            var context = canvas.getContext('2d');
+
+            context.drawImage(pic_back, 0, 0, 600, 800);
+            //drawTrails();
+        }
+
+        pic_token.onload = function () {
+            var canvas = document.getElementById('playGround');
+            var context = canvas.getContext('2d');
+
+            context.drawImage(pic_token, 306, 561, 88, 112, 0, 0, 88, 112);
+            //drawTrails();
+        }
+
+        pic_token1.onload = function () {
+            var canvas = document.getElementById('playGround');
+            var context = canvas.getContext('2d');
+
+            var offsetx = pic_token1.height-439-82;
+            var offsety = pic_token1.width-322-102;
+            console.log(offsetx)
+            console.log(offsety)
+            console.log(pic_token1.height)
+            console.log(pic_token1.width)
+            context.drawImage(pic_token1, 439, 322, 102, 82, 100, 100, 102, 82);
+            context.save();
+            context.translate(pic_token1.width * 0.5, pic_token1.height * 0.5);
+            context.rotate(-3.1415926*0.5);
+            context.translate(-pic_token1.width * 0.5, -pic_token1.height * 0.5);
+            context.drawImage(pic_token1, 439, 322, 102, 82, 900, 100, 102, 82);
+            context.restore();
+            //drawTrails();
+        }
+
+        function createCanopyPath(context) {
+            context.beginPath();
+            context.moveTo(-25, -50);
+            context.lineTo(-10, -80);
+            context.lineTo(-20, -80);
+            context.lineTo(-5, -110);
+            context.lineTo(-15, -110);
+
+            context.lineTo(0, -140);
+
+            context.lineTo(15, -110);
+            context.lineTo(5, -110);
+            context.lineTo(20, -80);
+            context.lineTo(10, -80);
+            context.lineTo(25, -50);
+            context.closePath();
+        }
+
+        function drawTrails() {
+            var canvas = document.getElementById('trails');
+            var context = canvas.getContext('2d');
+
+            context.save();
+            context.translate(130, 250);
+
+            createCanopyPath(context);
+
+            context.lineWidth = 4;
+            context.lineJoin = 'round';
+            context.strokeStyle = '#663300';
+            context.stroke();
+
+            context.fillStyle = '#339900';
+            context.fill();
+
+            // Draw the bark pattern image where
+            //  the filled rectangle was before
+            context.drawImage(bark, -5, -50, 10, 50);
+
+            context.restore();
+
+            context.save();
+            context.translate(-10, 350);
+            context.beginPath();
+            context.moveTo(0, 0);
+            context.quadraticCurveTo(170, -50, 260, -190);
+            context.quadraticCurveTo(310, -250, 410,-250);
+            context.strokeStyle = '#663300';
+            context.lineWidth = 20;
+            context.stroke();
+            context.restore();
+        }
+
+  </script>
+</html>
