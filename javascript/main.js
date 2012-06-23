@@ -28,12 +28,13 @@ g_gameScenePic = Array();
 g_gameAtlasPic = './pic/GameSceneAtlas.png';
 function init(){
   var strDir = './config/'
-  g_config['scene'] = loadConfig(strDir+"GameScene-ipad.xml");
+  g_config['scene'] = loadConfig(strDir+"GameScene-ipad.xml").plist[0];
   g_config['atlas'] = loadConfig(strDir+"GameSceneAtlas.xml").plist[0];
   g_config['helpScene'] = loadConfig(strDir+"HelpScene-ipad.xml");
   g_config['hintAtlas']=loadConfig(strDir+"HintAtlas.xml");
   g_config['init']=loadConfig(strDir+"init.xml");
   g_config['menu']=loadConfig(strDir+"Menu-ipad.xml");
+  dump_array(g_config.scene, 0);
   strDir = './pic/'
   g_gameScenePic['bandit'] = strDir+'bandit_theme-ipad.jpg';
   g_gameScenePic['family'] = strDir+'family_theme-ipad.jpg';
@@ -114,6 +115,9 @@ function array2kvTable(array) {
 function str2pt(str){
   var res = str.match(/\{(-?[0-9]+), (-?[0-9]+)\}$/);
   var ret = new Array();
+  if (null == res) {
+    return null;
+  }
   ret[0] = Number(res[1]);
   ret[1] = Number(res[2]);
 
@@ -142,7 +146,6 @@ ImageBlock.prototype.loadAtlas = function(key){
   var trimmed = conf.textureTrimmed;
   this.pic = new Image();
   pic.src = g_gameAtlasPic;
-  dump_array(g_config.atlas.frames[key], 0);
 
   pic.onload = function () {
       var canvas = document.getElementById('playGround');
@@ -192,60 +195,105 @@ ImageBlock.prototype.draw = function(){
 ImageBlock.prototype.translate = function(){
 }
 // ===========================Atlas block
-function AtlasBlock(){
+function Token(){
+  this.index = g_Index;
+  g_Index++;
   var canvas = document.getElementById('playGround');
   this.context = canvas.getContext('2d');
-
-  var context = this.context;
-  canvas.onclick = function(e){
-    context.beginPath();
-    context.moveTo(e.x, e.y);
-    context.lineTo(0, 0);
-    context.stroke();
-
-    console.log(e);
-    ge = e;
-  }
+  this.initialized = false;
+  this.x = 0;
+  this.y = 0;
+  this.colWidth = eval(g_config['scene'].cellWidth);
+  this.colHeight = eval(g_config['scene'].cellWidth);
+  this.colX = 0;
+  this.colY = 0;
+  this.loaded = false;
 }
-AtlasBlock.prototype.selectTexture = function (key) {
+Token.prototype.setCollistionRect = function (width, height) {
+  this.colWidth = width;
+  this.colHeight = height;
+  this.moveTo(this.x, this.y);
+}
+Token.prototype.collisionCheck = function (x, y) {
+  var px, py, width, height;
+  px = this.colX;
+  py = this.colY;
+  height = this.colHeight;
+  width = this.colWidth;
+
+  if (x > px && x < (px+width) &&
+      y > py && y < (py+height)){
+        return true;
+      }
+  return false;
+}
+g_Index = 0;
+Token.prototype.selectTexture = function (key) {
+  console.log();
+  console.log("selectTexture("+this.index+"):"+key);
+  if (null == key) {
+    this.loaded = false;
+    this.key = null;
+    return null;
+  }
   var conf = g_config.atlas.frames[key];
   this.colorRect = str2rect(conf.spriteColorRect);
   this.textureRect = str2rect(conf.textureRect);
   this.offset = str2pt(conf.spriteOffset);
-  this.size = str2pt(conf.spriteSize);
+  var size = str2pt(conf.spriteSize);
+  this.height = size[1];
+  this.width = size[0];
   this.sourceSize = str2pt(conf.spriteSourceSize);
   this.rotated = conf.textureRotated;
   this.trimmed = conf.textureTrimmed;
   this.pic = new Image();
   this.pic.src = g_gameAtlasPic;
-  this.x = 0;
-  this.y = 0;
+  this.loaded = false;
+  this.initialized = true;
+  this.key = key;
   var that = this;
-  that.loaded = false;
+
+  this.setCollistionRect(this.width, this.height);
   this.pic.onload = function () {
     that.loaded = true;
   }
 }
 
-AtlasBlock.prototype.moveTo = function (x, y) {
+Token.prototype.moveTo = function (x, y) {
+  console.log("moveTo("+this.index+"), ("+x+", "+y+")");
+  console.log(this.width+" "+this.height+" "+this.rotated);
   this.x = x;
   this.y = y;
-  this.render();
+
+  this.colX = x-this.colWidth*0.5;
+  this.colY = y-this.colHeight*0.5;
 }
 
-AtlasBlock.prototype.draw = function (key) {
+Token.prototype.draw = function (key) {
   var ctx = this.context;
   var textureRect = this.textureRect;
   var pic = this.pic;
-  var x = this.x;
-  var y = this.y;
+  var x = this.x-this.width*0.5; // center align
+  var y = this.y-this.height*0.5;
   var width = textureRect[2];
   var height = textureRect[3];
+
+  ctx.beginPath();
+  ctx.moveTo(this.colX, this.colY);
+  ctx.lineTo(this.colX, this.colY+this.colHeight);
+  ctx.moveTo(this.colX, this.colY);
+  ctx.lineTo(this.colX+this.colWidth, this.colY);
+  ctx.moveTo(this.colX+this.colWidth, this.colY+this.colHeight);
+  ctx.lineTo(this.colX+this.colWidth, this.colY);
+  ctx.moveTo(this.colX+this.colWidth, this.colY+this.colHeight);
+  ctx.lineTo(this.colX, this.colY+this.colHeight);
+  ctx.stroke();
 
   ctx.save();
   if ('true' == this.rotated){
     // translated position
-    x = pic.height-y-textureRect[2];
+    y = this.x-this.width*0.5;
+    x = pic.height-(this.y-this.width*0.5)-textureRect[2];
 
     ctx.translate(pic.width * 0.5, pic.height * 0.5);
     ctx.rotate(-3.1415926*0.5);
@@ -254,20 +302,22 @@ AtlasBlock.prototype.draw = function (key) {
   ctx.drawImage(pic, textureRect[0], textureRect[1], textureRect[2], textureRect[3], x, y, width, height);
   ctx.restore();
 }
-AtlasBlock.prototype.render = function (key) {
-  var that = this;
-  var fnLocal_draw = function () {
-    that.draw();
-  }
-  if (this.loaded){
-    fnLocal_draw();
-  } else {
-    var interval = setInterval(function (){
-      if (that.loaded){
-        fnLocal_draw();
-        clearInterval(interval);
-      }
-    }, 300);
+Token.prototype.render = function (key) {
+  if (this.initialized){
+    var that = this;
+    var fnLocal_draw = function () {
+      that.draw();
+    }
+    if (this.loaded){
+      fnLocal_draw();
+    } else {
+      var interval = setInterval(function (){
+        if (that.loaded){
+          fnLocal_draw();
+          clearInterval(interval);
+        }
+      }, 300);
+    }
   }
 }
 // ====================== gameScene
@@ -277,24 +327,24 @@ function Scene() {
 }
 Scene.prototype.load = function(key) {
   this.pic = new Image();
+  console.log(this.pic.width+" "+this.pic.height);
   this.pic.src = g_gameScenePic[key];
   var that = this;
 
   that.loaded = false;
   this.pic.onload = function () {
     that.loaded = true;
-    that.render();
   }
 }
 
 Scene.prototype.render = function(key) {
   var pic = this.pic;
   if (this.loaded) {
-    this.context.drawImage(pic, 0, 0, 600, 800);
+    this.context.drawImage(pic, 0, 0, 768, 1024);
   } else {
     var that = this;
     var interval = setInterval(function () {
-      that.context.drawImage(pic, 0, 0, 600, 800);
+      that.context.drawImage(pic, 0, 0, 768, 1024);
       clearInterval(interval);
     }, 10);
   }
@@ -303,6 +353,8 @@ Scene.prototype.render = function(key) {
 function Game(){
   this.canvas = document.getElementById('playGround');
   this.context = this.canvas.getContext('2d');
+  this.height = 1024;
+  this.width = 768;
 }
 
 Game.prototype.loadGameScene = function(key) {
@@ -312,26 +364,304 @@ Game.prototype.loadGameScene = function(key) {
 
 Game.prototype.setup = function () {
   this.loadGameScene('father');
-  atlas_gun = new AtlasBlock();
-  atlas_gun.selectTexture('gunItem');
-  atlas_father = new AtlasBlock();
-  atlas_father.selectTexture('godfather');
+  this.field = new Array();
+  var width = eval(g_config['scene'].cellWidth);
+  var pt = str2pt(g_config['scene'].fieldPosition);
+  pt[1] = this.height-pt[1]-width;
+
+  for (var i=0; i<6; i++) {
+    this.field[i] = new Array();
+    for (var j=0; j<6; j++) {
+      this.field[i][j] = new Token();
+      //this.field[i][j].selectTexture('godfather');
+      this.field[i][j].moveTo(pt[0]+width*(j+0.5), pt[1]-width*(i-0.5));
+      this.field[i][j].setCollistionRect(width, width);
+    }
+  }
+  // change it into graph
+  // left
+  for (var i=0; i<6; i++) {
+    for (var j=0; j<5; j++) {
+      this.field[i][j].left = this.field[i][j+1];
+    }
+  }
+  // right
+  for (var i=0; i<6; i++) {
+    for (var j=1; j<6; j++) {
+      this.field[i][j].right = this.field[i][j-1];
+    }
+  }
+  // up
+  for (var i=1; i<6; i++) {
+    for (var j=0; j<6; j++) {
+      this.field[i][j].up = this.field[i-1][j];
+    }
+  }
+  // down
+  for (var i=0; i<5; i++) {
+    for (var j=0; j<6; j++) {
+      this.field[i][j].down = this.field[i+1][j];
+    }
+  }
+
+  this.generatorFrame = new Token();
+  this.islandFrame = new Token();
+  this.generator = new Token();
+  this.island = new Token();
+
+  pt = str2pt(g_config['scene'].generatorPosition);
+  var token = this.generatorFrame;
+  token.selectTexture('generator');
+  token.moveTo(pt[0], this.height-pt[1]);
+  pt = str2pt(g_config['scene'].stockPosition);
+  var token = this.islandFrame;
+  token.selectTexture('stock');
+  token.moveTo(pt[0], this.height-pt[1]);
+  token = this.island;
+ // token.selectTexture('angel');
+  token.moveTo(pt[0], this.height-pt[1]);
+
+  this.generate();
 }
+
+Game.prototype.generate = function () {
+  var width = eval(g_config['scene'].cellWidth);
+  var pt = str2pt(g_config['scene'].generatorPosition);
+
+  var token = this.generator;
+  token.selectTexture('gangster');
+  token.moveTo(pt[0], this.height-pt[1]);
+}
+
+Game.prototype.generatorFlyBack = function () {
+  var pt = str2pt(g_config['scene'].generatorPosition);
+  var token = this.generator;
+
+  token.moveTo(pt[0], this.height-pt[1]);
+}
+
+Game.prototype.islandFlyBack = function () {
+  var pt = str2pt(g_config['scene'].stockPosition);
+  var token = this.island;
+
+  token.moveTo(pt[0], this.height-pt[1]);
+}
+g_matchingRule = new Array();
+g_matchingRule['moneyItem'] = 'banditItem';
+g_matchingRule['banditItem'] = 'banditcarItem';
+g_matchingRule['banditcarItem'] = 'prison';
+g_matchingRule['prison'] = 'gangster';
+g_matchingRule['gangster'] = 'bar';
+g_matchingRule['bar'] = 'family';
+g_matchingRule['family'] = 'casino';
+g_matchingRule['casino'] = 'godfather';
+g_matchingRule['godfather'] = 'demon';
+g_matchingRule['demon'] = 'hell';
+Game.prototype.matchingCheck = function (token) {
+  var list = new Array();
+  var tmpList = new Array();
+  var key = token.key;
+  var index = 0;
+  var i = 0;
+  var fnHelper = function ()
+  {
+    for (var j=0; j<tmpList.length; j++)
+    {
+      var k = 0;
+      for (k=0; k<list.length; k++)
+      {
+        if (list[k] == tmpList[j])
+          break;
+      }
+      if (k >= list.length)
+        list[list.length] = tmpList[j];
+    }
+  }
+  list[0] = token;
+  while (i < list.length){
+    index = 0;
+    if (null != list[i].left && key == list[i].left.key)
+      tmpList[index++] = list[i].left;
+    if (null != list[i].right && key == list[i].right.key)
+      tmpList[index++] = list[i].right;
+    if (null != list[i].up && key == list[i].up.key)
+      tmpList[index++] = list[i].up;
+    if (null != list[i].down && key == list[i].down.key)
+      tmpList[index++] = list[i].down;
+    fnHelper();
+    i++;
+  }
+  if (list.length >= 3)
+  {
+    var width = eval(g_config['scene'].cellWidth);
+    console.log("matching:"+list.length);
+    for (var k=1; k<list.length; k++)
+    {
+      list[k].selectTexture(null);
+    }
+    token.selectTexture(g_matchingRule[key]);
+    token.setCollistionRect(width, width);
+
+    // chain
+    this.matchingCheck(token);
+  }
+}
+
+Game.prototype.matchingAnimate = function (list) {
+    for (var k=1; k<list.length; k++)
+    {
+      list[k].selectTexture(null);
+    }
+    token.selectTexture(g_matchingRule[key]);
+    token.setCollistionRect(width, width);
+}
+
+Game.prototype.onMouseMove = function (e) {
+  if (null != this.activedToken) {
+    if ('generator' == this.activedOp ||
+        'island' == this.activedOp){
+          this.activedToken.moveTo(e.offsetX+this.activedOffsetX, 
+              e.offsetY+this.activedOffsetX);
+        }
+  }
+}
+
+Game.prototype.onMouseDown = function (e) {
+  if (this.collCheck(e.offsetX, e.offsetY)) {
+    this.activedOffsetX = this.activedToken.x-e.offsetX;
+    this.activedOffsetY = this.activedToken.y-e.offsetY;
+  } else {
+    console.log("down");
+  }
+}
+
+Game.prototype.onMouseUp = function (e) {
+  var width = eval(g_config['scene'].cellWidth);
+  var preToken = this.activedToken;
+  console.log("onMouseUp src:"+this.activedOp);
+  if ('generator' == this.activedOp) { // from generator
+    if (this.collCheck(e.offsetX, e.offsetY)) {
+      console.log("onMouseUp dst:"+this.activedOp+","+this.activedToken.loaded);
+      if (!this.activedToken.loaded) {
+        if ('field' == this.activedOp) {
+          this.activedToken.selectTexture(preToken.key);
+          this.activedToken.setCollistionRect(width, width);
+          this.matchingCheck(this.activedToken);
+          this.generate();
+        } else if ('emptyIsland' == this.activedOp) {
+          this.activedToken.selectTexture(preToken.key);
+          this.generate();
+        } else {
+          this.generatorFlyBack();
+        }
+      } else {
+        this.generatorFlyBack();
+      }
+    } else {
+      this.generatorFlyBack();
+    }
+  } else if ('island' == this.activedOp) { // from island
+    if (this.collCheck(e.offsetX, e.offsetY)) {
+      if (!this.activedToken.loaded) {
+        if ('field' == this.activedOp) {
+          this.activedToken.selectTexture(preToken.key);
+          this.activedToken.setCollistionRect(width, width);
+          this.matchingCheck(this.activedToken);
+          this.island.selectTexture(null);
+          this.islandFlyBack();
+        } else {
+          this.islandFlyBack();
+        }
+      } else {
+        this.islandFlyBack();
+      }
+    } else {
+      this.islandFlyBack();
+    }
+  }
+  this.activedOp = null;
+  this.activedToken = null;
+}
+
+Game.prototype.collCheck = function (x, y) {
+  for (var i=0; i<6; i++) {
+    for (var j=0; j<6; j++) {
+      if (this.field[i][j].collisionCheck(x, y)) {
+        this.activedOp = 'field';
+        this.activedToken = this.field[i][j];
+        return true;
+      }
+    }
+  }
+
+  var tar;
+  if (this.island.loaded) {
+    tar = this.island;
+    if (tar.collisionCheck(x, y)) {
+      this.activedOp = 'island';
+      this.activedToken = tar;
+      return true;
+    }
+  } else {
+    tar = this.islandFrame;  
+    if (tar.collisionCheck(x, y)) {
+      this.activedOp = 'emptyIsland';
+      this.activedToken = this.island;
+      return true;
+    }
+  }
+  tar = this.generator;
+  if (tar.collisionCheck(x, y)) {
+    this.activedOp = 'generator';
+    this.activedToken = tar;
+    return true;
+  }
+  return false;
+}
+
 Game.prototype.start = function () {
   px = 0;
   py = 0;
   var that = this;
+  this.canvas.onmousemove = function (e) {that.onMouseMove(e);};
+  this.canvas.onmouseup = function (e) {that.onMouseUp(e);};
+  this.canvas.onmousedown = function (e) {that.onMouseDown(e);};
+
   setInterval(function () {
+    that.render();
     that.tick();
-  }, 300);
+  }, 10);
 }
-Game.prototype.tick = function () {
+
+Game.prototype.render = function () {
   this.scene.render();
 
-  px += 10;
-  py += 10;
-  atlas_father.moveTo(px, py);
-  atlas_father.render();
+  for (var i in g_config['scene']) {
+    if ('generatorPosition' == i ||
+        'fieldPosition' ==i){
+          continue
+        }
+    var pt = str2pt(g_config['scene'][i]);
+    if (null != pt) {
+      this.context.font = "12px impact";
+      this.context.fillStyle = "#FFFFFF";
+      this.context.textAlign = "center";
+      this.context.fillText(i, pt[0], 1024-pt[1]);
+    }
+  }
+
+  for (var i=0; i<6; i++) {
+    for (var j=0; j<6; j++) {
+      this.field[i][j].render();
+    }
+  }
+
+  this.generatorFrame.render();
+  this.islandFrame.render();
+  this.island.render();
+  this.generator.render();
+}
+Game.prototype.tick = function () {
 }
 // ====================== util
 function dump_array (array, indent) {
