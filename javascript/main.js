@@ -34,7 +34,7 @@ function init(){
   g_config['hintAtlas']=loadConfig(strDir+"HintAtlas.xml");
   g_config['init']=loadConfig(strDir+"init.xml");
   g_config['menu']=loadConfig(strDir+"Menu-ipad.xml");
-  dump_array(g_config.scene, 0);
+//  dump_array(g_config.atlas.frames, 0);
   strDir = './pic/'
   g_gameScenePic['bandit'] = strDir+'bandit_theme-ipad.jpg';
   g_gameScenePic['family'] = strDir+'family_theme-ipad.jpg';
@@ -47,6 +47,19 @@ function init(){
   g_gameScenePic['money'] = strDir+'money_theme-ipad.jpg';
   g_gameScenePic['police'] = strDir+'police_theme-ipad.jpg';
   g_gameScenePic['prison'] = strDir+'prison_theme-ipad.jpg';
+
+  var index = 0;
+  var probablity = 0;
+  var item;
+  for (var i in g_itemProbablity)
+  {
+    probablity += g_itemProbablity[i];
+    g_tblProbabilty[index] = new Array();
+    item = g_tblProbabilty[index];
+    item.key = i;
+    item.rate = probablity;
+    index++;
+  }
 }
 
 function myXMLParser(doc) {
@@ -229,7 +242,6 @@ Token.prototype.collisionCheck = function (x, y) {
 }
 g_Index = 0;
 Token.prototype.selectTexture = function (key) {
-  console.log();
   console.log("selectTexture("+this.index+"):"+key);
   if (null == key) {
     this.loaded = false;
@@ -260,8 +272,8 @@ Token.prototype.selectTexture = function (key) {
 }
 
 Token.prototype.moveTo = function (x, y) {
-  console.log("moveTo("+this.index+"), ("+x+", "+y+")");
-  console.log(this.width+" "+this.height+" "+this.rotated);
+  //console.log("moveTo("+this.index+"), ("+x+", "+y+")");
+  //console.log(this.width+" "+this.height+" "+this.rotated);
   this.x = x;
   this.y = y;
 
@@ -293,7 +305,7 @@ Token.prototype.draw = function (key) {
   if ('true' == this.rotated){
     // translated position
     y = this.x-this.width*0.5;
-    x = pic.height-(this.y-this.width*0.5)-textureRect[2];
+    x = pic.height-(this.y-this.height*0.5)-textureRect[2];
 
     ctx.translate(pic.width * 0.5, pic.height * 0.5);
     ctx.rotate(-3.1415926*0.5);
@@ -424,12 +436,52 @@ Game.prototype.setup = function () {
   this.generate();
 }
 
+Game.prototype.applyToken = function (token, preToken) {
+  var width = eval(g_config['scene'].cellWidth);
+  if ('gunItem' == preToken.key) {
+  } else if ('jokerItem' == preToken.key) {
+  } else if ('policeman' == preToken.key) {
+    token.selectTexture(preToken.key);
+    token.setCollistionRect(width, width);
+  } else if ('girlItem' == preToken.key) {
+  } else if ('starItem' == preToken.key) {
+  } else if ('fbi' == preToken.key) {
+    token.selectTexture(preToken.key);
+    token.setCollistionRect(width, width);
+  } else {
+    token.selectTexture(preToken.key);
+    token.setCollistionRect(width, width);
+    this.matchingCheck(token);
+  } 
+}
+g_itemProbablity = new Array();
+g_itemProbablity['moneyItem'] = 0.712;
+g_itemProbablity['banditItem'] = 0.11;
+g_itemProbablity['banditcarItem'] = 0.0195;
+g_itemProbablity['prison'] = 0.005;
+g_itemProbablity['policeman'] = 0.1;
+g_itemProbablity['gunItem'] = 0.024;
+g_itemProbablity['jokerItem'] = 0.012;
+g_itemProbablity['fbi'] = 0.005;
+g_itemProbablity['girlItem'] = 0.012;
+g_itemProbablity['starItem'] = 0.0005;
+g_tblProbabilty = new Array();
 Game.prototype.generate = function () {
   var width = eval(g_config['scene'].cellWidth);
   var pt = str2pt(g_config['scene'].generatorPosition);
 
   var token = this.generator;
-  token.selectTexture('gangster');
+  var rand = Math.random();
+  var key = null;
+  for (var i=0; i<g_tblProbabilty.length; i++)
+  {
+    if (g_tblProbabilty[i].rate >= rand)
+    {
+      key = g_tblProbabilty[i].key;
+      break;
+    }
+  }
+  token.selectTexture(key);
   token.moveTo(pt[0], this.height-pt[1]);
 }
 
@@ -457,6 +509,15 @@ g_matchingRule['family'] = 'casino';
 g_matchingRule['casino'] = 'godfather';
 g_matchingRule['godfather'] = 'demon';
 g_matchingRule['demon'] = 'hell';
+
+g_matchingRule['detective'] = 'policecar';
+g_matchingRule['policecar'] = 'segeant';
+g_matchingRule['segeant'] = 'police';
+g_matchingRule['police'] = 'chief';
+g_matchingRule['chief'] = 'minister';
+/*
+president
+*/
 Game.prototype.matchingCheck = function (token) {
   var list = new Array();
   var tmpList = new Array();
@@ -536,7 +597,6 @@ Game.prototype.onMouseDown = function (e) {
 }
 
 Game.prototype.onMouseUp = function (e) {
-  var width = eval(g_config['scene'].cellWidth);
   var preToken = this.activedToken;
   console.log("onMouseUp src:"+this.activedOp);
   if ('generator' == this.activedOp) { // from generator
@@ -544,9 +604,7 @@ Game.prototype.onMouseUp = function (e) {
       console.log("onMouseUp dst:"+this.activedOp+","+this.activedToken.loaded);
       if (!this.activedToken.loaded) {
         if ('field' == this.activedOp) {
-          this.activedToken.selectTexture(preToken.key);
-          this.activedToken.setCollistionRect(width, width);
-          this.matchingCheck(this.activedToken);
+          this.applyToken(this.activedToken, preToken);
           this.generate();
         } else if ('emptyIsland' == this.activedOp) {
           this.activedToken.selectTexture(preToken.key);
@@ -564,9 +622,7 @@ Game.prototype.onMouseUp = function (e) {
     if (this.collCheck(e.offsetX, e.offsetY)) {
       if (!this.activedToken.loaded) {
         if ('field' == this.activedOp) {
-          this.activedToken.selectTexture(preToken.key);
-          this.activedToken.setCollistionRect(width, width);
-          this.matchingCheck(this.activedToken);
+          this.applyToken(this.activedToken, preToken);
           this.island.selectTexture(null);
           this.islandFlyBack();
         } else {
@@ -667,7 +723,7 @@ Game.prototype.tick = function () {
 function dump_array (array, indent) {
   if (!(array instanceof Array))
     return false;
-  if (indent > 16)
+  if (indent > 10)
     return false;
   var preStr = "";
   for (var j=0; j<indent; j++) {
@@ -711,3 +767,30 @@ function getDataByid(orderDoc, conf, number) {
   ret['value']=data;
 	return ret;
 }
+
+/*
+add
+angel
+arrow
+bag1
+bag2
+bag3
+bag4
+closeButton
+coin1
+coin2
+coin3
+coin4
+coin5
+generator
+generator-free
+heaven
+inian
+pause
+question
+selection
+stock
+stock2
+storeButton
+toilet
+*/
