@@ -207,131 +207,6 @@ ImageBlock.prototype.draw = function(){
 }
 ImageBlock.prototype.translate = function(){
 }
-// ===========================Atlas block
-function Token(){
-  this.index = g_Index;
-  g_Index++;
-  var canvas = document.getElementById('playGround');
-  this.context = canvas.getContext('2d');
-  this.initialized = false;
-  this.x = 0;
-  this.y = 0;
-  this.colWidth = eval(g_config['scene'].cellWidth);
-  this.colHeight = eval(g_config['scene'].cellWidth);
-  this.colX = 0;
-  this.colY = 0;
-  this.loaded = false;
-}
-Token.prototype.setCollistionRect = function (width, height) {
-  this.colWidth = width;
-  this.colHeight = height;
-  this.moveTo(this.x, this.y);
-}
-Token.prototype.collisionCheck = function (x, y) {
-  var px, py, width, height;
-  px = this.colX;
-  py = this.colY;
-  height = this.colHeight;
-  width = this.colWidth;
-
-  if (x > px && x < (px+width) &&
-      y > py && y < (py+height)){
-        return true;
-      }
-  return false;
-}
-g_Index = 0;
-Token.prototype.selectTexture = function (key) {
-  console.log("selectTexture("+this.index+"):"+key);
-  if (null == key) {
-    this.loaded = false;
-    this.key = null;
-    return null;
-  }
-  var conf = g_config.atlas.frames[key];
-  this.colorRect = str2rect(conf.spriteColorRect);
-  this.textureRect = str2rect(conf.textureRect);
-  this.offset = str2pt(conf.spriteOffset);
-  var size = str2pt(conf.spriteSize);
-  this.height = size[1];
-  this.width = size[0];
-  this.sourceSize = str2pt(conf.spriteSourceSize);
-  this.rotated = conf.textureRotated;
-  this.trimmed = conf.textureTrimmed;
-  this.pic = new Image();
-  this.pic.src = g_gameAtlasPic;
-  this.loaded = false;
-  this.initialized = true;
-  this.key = key;
-  var that = this;
-
-  this.setCollistionRect(this.width, this.height);
-  this.pic.onload = function () {
-    that.loaded = true;
-  }
-}
-
-Token.prototype.moveTo = function (x, y) {
-  //console.log("moveTo("+this.index+"), ("+x+", "+y+")");
-  //console.log(this.width+" "+this.height+" "+this.rotated);
-  this.x = x;
-  this.y = y;
-
-  this.colX = x-this.colWidth*0.5;
-  this.colY = y-this.colHeight*0.5;
-}
-
-Token.prototype.draw = function (key) {
-  var ctx = this.context;
-  var textureRect = this.textureRect;
-  var pic = this.pic;
-  var x = this.x-this.width*0.5; // center align
-  var y = this.y-this.height*0.5;
-  var width = textureRect[2];
-  var height = textureRect[3];
-
-  ctx.beginPath();
-  ctx.moveTo(this.colX, this.colY);
-  ctx.lineTo(this.colX, this.colY+this.colHeight);
-  ctx.moveTo(this.colX, this.colY);
-  ctx.lineTo(this.colX+this.colWidth, this.colY);
-  ctx.moveTo(this.colX+this.colWidth, this.colY+this.colHeight);
-  ctx.lineTo(this.colX+this.colWidth, this.colY);
-  ctx.moveTo(this.colX+this.colWidth, this.colY+this.colHeight);
-  ctx.lineTo(this.colX, this.colY+this.colHeight);
-  ctx.stroke();
-
-  ctx.save();
-  if ('true' == this.rotated){
-    // translated position
-    y = this.x-this.width*0.5;
-    x = pic.height-(this.y-this.height*0.5)-textureRect[2];
-
-    ctx.translate(pic.width * 0.5, pic.height * 0.5);
-    ctx.rotate(-3.1415926*0.5);
-    ctx.translate(-pic.width * 0.5, -pic.height * 0.5);
-  }
-  ctx.drawImage(pic, textureRect[0], textureRect[1], textureRect[2], textureRect[3], x, y, width, height);
-  ctx.restore();
-}
-Token.prototype.render = function (key) {
-  if (this.initialized){
-    var that = this;
-    var fnLocal_draw = function () {
-      that.draw();
-    }
-    if (this.loaded){
-      fnLocal_draw();
-    } else {
-      var interval = setInterval(function (){
-        if (that.loaded){
-          fnLocal_draw();
-          clearInterval(interval);
-        }
-      }, 300);
-    }
-  }
-}
 // ====================== gameScene
 function Scene() {
   var canvas = document.getElementById('playGround');
@@ -436,6 +311,90 @@ Game.prototype.setup = function () {
   this.generate();
 }
 
+Game.prototype.findEmptyToken = function (token, fly) 
+{
+  if (fly)
+  {
+    while (true)
+    {
+      var seed = Math.random();
+      seed *= 36;
+      seed = Math.floor(seed);
+      if (seed/6 != token.x && seed%6 != token.y &&
+          this.field[seed/6][seed%6].key == null)
+        return this.field[seed/6][seed%6];
+    }
+  }
+  else 
+  {
+    if (null != token.left && null == token.left.key)
+      return token.left;
+    if (null != token.right && null == token.right.key)
+      return token.right;
+    if (null != token.up && null == token.up.key)
+      return token.up;
+    if (null != token.down && null == token.down.key)
+      return token.down;
+  }
+}
+
+Game.prototype.tick = function () 
+{
+  var width = eval(g_config['scene'].cellWidth);
+  var token = null;
+  for (var i=0; i<6; i++) {
+    for (var j=0; j<6; j++) {
+      token = this.field[i][j];
+      switch (token.key)
+      {
+        case 'policeman': // random walk
+          token.flag = true;
+          break;
+        case 'fbi': // random fly
+          token.flag = true;
+          break;
+      }
+    }
+  }
+  for (var i=0; i<6; i++) {
+    for (var j=0; j<6; j++) {
+      token = this.field[i][j];
+      if (token.flag)
+      {
+        switch (token.key)
+        {
+          case 'policeman': // random walk
+            var pt = this.findEmptyToken(token, 0);
+            if (pt == null) // nowhere to go, turn into detective
+            {
+              token.selectTexture('detective');
+              token.setCollistionRect(width, width);
+              this.matchingCheck(token);
+            }
+            else
+            {
+              token.selectTexture(null);
+              token.setCollistionRect(width, width);
+              pt.selectTexture('policeman');
+              pt.setCollistionRect(width, width);
+            }
+            break;
+          case 'fbi': // random fly
+            var pt = this.findEmptyToken(token, 1);
+            if (pt != null) // go~
+            {
+              token.selectTexture(null);
+              token.setCollistionRect(width, width);
+              pt.selectTexture('fbi');
+              pt.setCollistionRect(width, width);
+            }
+            break;
+        }
+        token.flag = false;
+      }
+    }
+  }
+}
 Game.prototype.applyToken = function (token, preToken) {
   var width = eval(g_config['scene'].cellWidth);
   if ('gunItem' == preToken.key) {
@@ -453,6 +412,7 @@ Game.prototype.applyToken = function (token, preToken) {
     token.setCollistionRect(width, width);
     this.matchingCheck(token);
   } 
+  this.tick();
 }
 g_itemProbablity = new Array();
 g_itemProbablity['moneyItem'] = 0.712;
@@ -685,7 +645,6 @@ Game.prototype.start = function () {
 
   setInterval(function () {
     that.render();
-    that.tick();
   }, 10);
 }
 
@@ -716,8 +675,6 @@ Game.prototype.render = function () {
   this.islandFrame.render();
   this.island.render();
   this.generator.render();
-}
-Game.prototype.tick = function () {
 }
 // ====================== util
 function dump_array (array, indent) {

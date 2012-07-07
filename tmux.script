@@ -1,0 +1,16 @@
+tmux has-session -t devmvp
+if [ $? != 0 ]
+then
+  tmux new-session -s  devmpv -n editor -d
+  tmux send-keys -t devmpv 'cd ~/Code/web/mvp/' C-m
+  tmux send-keys -t devmpv 'vim -S Session.vim' C-m
+  tmux split-window -v -p 10 -t devmpv
+  # send command to [session]:[window].[pane]
+  tmux send-keys -t devmpv:0.1 'cd ~/Code/web/mvp/' C-m
+  # new window
+  tmux new-window -n console -t devmpv
+  tmux send-keys -t devmpv:1 'cd ~' C-m
+
+  tmux select-window -t devmpv:0
+fi
+tmux attach -t devmpv
