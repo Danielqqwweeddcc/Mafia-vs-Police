@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>addMoneyButtonPosition</key>
+	<string>{510, 975}</string>
+	<key>addStepsButtonPosition</key>
+	<string>{290, 975}</string>
+	<key>addStockButtonPosition</key>
+	<string>{60, 180}</string>
+	<key>cellWidth</key>
+	<string>102.5</string>
+	<key>fieldPosition</key>
+	<string>{77, 275}</string>
+	<key>generatorPosition</key>
+	<string>{390, 114}</string>
+	<key>linePosition</key>
+	<string>{240, 947}</string>
+	<key>menuButtonPosition</key>
+	<string>{60, 975}</string>
+	<key>moneyPosition</key>
+	<string>{445, 974}</string>
+	<key>scorePosition</key>
+	<string>{665, 974}</string>
+	<key>scoreTextFieldSize</key>
+	<string>{120, 40}</string>
+	<key>shopPosition</key>
+	<string>{605, 113}</string>
+	<key>stepsPosition</key>
+	<string>{230, 977}</string>
+	<key>stockPosition</key>
+	<string>{165, 136}</string>
+</dict>
+</plist>

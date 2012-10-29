@@ -1,0 +1,1652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>1000 000-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {236, 108}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{236, 108}</string>
+			<key>spriteSourceSize</key>
+			<string>{236, 108}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1141, 1367}, {236, 108}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>500 000-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {236, 108}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{236, 108}</string>
+			<key>spriteSourceSize</key>
+			<string>{236, 108}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1141, 1147}, {236, 108}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>ActionButton-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {166, 48}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{166, 48}</string>
+			<key>spriteSourceSize</key>
+			<string>{166, 48}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{772, 408}, {166, 48}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>BuyMoney-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {510, 101}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{510, 101}</string>
+			<key>spriteSourceSize</key>
+			<string>{510, 101}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{772, 459}, {510, 101}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>EnergyStore-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {562, 373}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{562, 373}</string>
+			<key>spriteSourceSize</key>
+			<string>{562, 373}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1437, 755}, {562, 373}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Install-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {510, 123}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{510, 123}</string>
+			<key>spriteSourceSize</key>
+			<string>{510, 123}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1141, 156}, {510, 123}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>Lightning-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {30, 43}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{30, 43}</string>
+			<key>spriteSourceSize</key>
+			<string>{30, 43}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1065, 106}, {30, 43}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>MagazineInstall-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {472, 130}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{472, 130}</string>
+			<key>spriteSourceSize</key>
+			<string>{472, 130}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1137, 1853}, {472, 130}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>MainScreen-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {768, 1024}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{768, 1024}</string>
+			<key>spriteSourceSize</key>
+			<string>{768, 1024}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{2, 2}, {768, 1024}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>MoneyInstall-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {510, 130}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{510, 130}</string>
+			<key>spriteSourceSize</key>
+			<string>{510, 130}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{625, 1853}, {510, 130}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>NoAdds-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {61, 36}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{61, 36}</string>
+			<key>spriteSourceSize</key>
+			<string>{61, 36}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1065, 68}, {61, 36}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>bandit-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {236, 108}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{236, 108}</string>
+			<key>spriteSourceSize</key>
+			<string>{236, 108}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{772, 298}, {236, 108}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>buy115-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {136, 146}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{136, 146}</string>
+			<key>spriteSourceSize</key>
+			<string>{136, 146}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{772, 2}, {136, 146}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>buy20-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {108, 146}}</string>
+			<key>spriteOffset</key>
+			<string>{-14, -0}</string>
+			<key>spriteSize</key>
+			<string>{108, 146}</string>
+			<key>spriteSourceSize</key>
+			<string>{136, 146}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1335, 559}, {108, 146}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>buy260-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {136, 146}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{136, 146}</string>
+			<key>spriteSourceSize</key>
+			<string>{136, 146}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{772, 150}, {136, 146}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>buy800-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {136, 146}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{136, 146}</string>
+			<key>spriteSourceSize</key>
+			<string>{136, 146}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1136, 2}, {136, 146}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>buyalltheme-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {582, 56}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{582, 56}</string>
+			<key>spriteSourceSize</key>
+			<string>{582, 56}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1445, 575}, {582, 56}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>buyallthemeLock-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {582, 56}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{582, 56}</string>
+			<key>spriteSourceSize</key>
+			<string>{582, 56}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1445, 633}, {582, 56}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>car-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {236, 108}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{236, 108}</string>
+			<key>spriteSourceSize</key>
+			<string>{236, 108}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1141, 1257}, {236, 108}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>check-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 2}, {48, 52}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -1}</string>
+			<key>spriteSize</key>
+			<string>{48, 52}</string>
+			<key>spriteSourceSize</key>
+			<string>{48, 54}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1611, 2}, {48, 52}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>close-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{20, 20}, {40, 40}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{40, 40}</string>
+			<key>spriteSourceSize</key>
+			<string>{80, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1903, 228}, {40, 40}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>facebook-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {148, 72}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{148, 72}</string>
+			<key>spriteSourceSize</key>
+			<string>{148, 72}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1141, 1765}, {148, 72}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>facebookLock-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {148, 72}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{148, 72}</string>
+			<key>spriteSourceSize</key>
+			<string>{148, 72}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1291, 1765}, {148, 72}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>facebookMenu-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{2, 12}, {100, 92}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -6}</string>
+			<key>spriteSize</key>
+			<string>{100, 92}</string>
+			<key>spriteSourceSize</key>
+			<string>{104, 104}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1335, 707}, {100, 92}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>fullversion1-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{90, 14}, {400, 52}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{400, 52}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1611, 341}, {400, 52}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>fullversion2-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{6, 4}, {570, 62}}</string>
+			<key>spriteOffset</key>
+			<string>{1, 5}</string>
+			<key>spriteSize</key>
+			<string>{570, 62}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1445, 691}, {570, 62}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>fullversion3-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{93, 14}, {396, 52}}</string>
+			<key>spriteOffset</key>
+			<string>{1, -0}</string>
+			<key>spriteSize</key>
+			<string>{396, 52}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1611, 513}, {396, 52}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>fullversion4-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{99, 9}, {382, 62}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{382, 62}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1657, 110}, {382, 62}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>fullversion5-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{205, 10}, {168, 60}}</string>
+			<key>spriteOffset</key>
+			<string>{-1, -0}</string>
+			<key>spriteSize</key>
+			<string>{168, 60}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1152, 1985}, {168, 60}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>fullversion6-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{175, 12}, {234, 62}}</string>
+			<key>spriteOffset</key>
+			<string>{2, -3}</string>
+			<key>spriteSize</key>
+			<string>{234, 62}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1379, 1404}, {234, 62}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>fullversion7-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{48, 14}, {484, 52}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{484, 52}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1433, 1130}, {484, 52}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>gamecenter-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 8}, {159, 96}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -4}</string>
+			<key>spriteSize</key>
+			<string>{159, 96}</string>
+			<key>spriteSourceSize</key>
+			<string>{159, 104}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1141, 1593}, {159, 96}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>girl-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {236, 108}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{236, 108}</string>
+			<key>spriteSourceSize</key>
+			<string>{236, 108}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1379, 1294}, {236, 108}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>greenbanner-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {153, 83}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{153, 83}</string>
+			<key>spriteSourceSize</key>
+			<string>{153, 83}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{910, 68}, {153, 83}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>help1-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{215, 15}, {150, 50}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{150, 50}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1302, 1593}, {150, 50}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>help2-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{111, 14}, {358, 52}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{358, 52}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1666, 174}, {358, 52}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>help3-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{210, 16}, {162, 50}}</string>
+			<key>spriteOffset</key>
+			<string>{1, -1}</string>
+			<key>spriteSize</key>
+			<string>{162, 50}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1445, 523}, {162, 50}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>help4-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{203, 9}, {172, 62}}</string>
+			<key>spriteOffset</key>
+			<string>{-1, -0}</string>
+			<key>spriteSize</key>
+			<string>{172, 62}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1379, 1468}, {172, 62}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>help5-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{234, 11}, {112, 60}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -1}</string>
+			<key>spriteSize</key>
+			<string>{112, 60}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1552, 1985}, {112, 60}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>help6-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{232, 15}, {116, 54}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -2}</string>
+			<key>spriteSize</key>
+			<string>{116, 54}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1919, 1130}, {116, 54}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>help7-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{156, 12}, {268, 58}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -1}</string>
+			<key>spriteSize</key>
+			<string>{268, 58}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1335, 281}, {268, 58}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>joker-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {236, 108}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{236, 108}</string>
+			<key>spriteSourceSize</key>
+			<string>{236, 108}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1666, 1292}, {236, 108}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>language1-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{168, 14}, {244, 52}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{244, 52}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1666, 1184}, {244, 52}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>language2-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{148, 12}, {284, 60}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -2}</string>
+			<key>spriteSize</key>
+			<string>{284, 60}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{468, 1985}, {284, 60}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>language3-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{158, 16}, {266, 52}}</string>
+			<key>spriteOffset</key>
+			<string>{1, -2}</string>
+			<key>spriteSize</key>
+			<string>{266, 52}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1335, 341}, {266, 52}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>language4-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{208, 9}, {164, 62}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{164, 62}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1445, 459}, {164, 62}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>language5-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{234, 10}, {114, 60}}</string>
+			<key>spriteOffset</key>
+			<string>{1, -0}</string>
+			<key>spriteSize</key>
+			<string>{114, 60}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1322, 1985}, {114, 60}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>language6-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{207, 11}, {166, 62}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -2}</string>
+			<key>spriteSize</key>
+			<string>{166, 62}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1141, 1529}, {166, 62}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>language7-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{158, 7}, {262, 62}}</string>
+			<key>spriteOffset</key>
+			<string>{-1, 2}</string>
+			<key>spriteSize</key>
+			<string>{262, 62}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1335, 395}, {262, 62}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>locked-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {44, 54}}</string>
+			<key>spriteOffset</key>
+			<string>{-2, -0}</string>
+			<key>spriteSize</key>
+			<string>{44, 54}</string>
+			<key>spriteSourceSize</key>
+			<string>{48, 54}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1611, 56}, {44, 54}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>needcoins-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {561, 440}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{561, 440}</string>
+			<key>spriteSourceSize</key>
+			<string>{561, 440}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{772, 567}, {561, 440}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>newgame1-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{135, 14}, {310, 52}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{310, 52}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1010, 281}, {310, 52}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>newgame2-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{91, 14}, {398, 52}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{398, 52}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1611, 459}, {398, 52}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>newgame3-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{108, 16}, {364, 52}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -2}</string>
+			<key>spriteSize</key>
+			<string>{364, 52}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1666, 56}, {364, 52}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>newgame4-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{178, 10}, {224, 64}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -2}</string>
+			<key>spriteSize</key>
+			<string>{224, 64}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{910, 2}, {224, 64}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>newgame5-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{205, 10}, {170, 60}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{170, 60}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{980, 1985}, {170, 60}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>newgame6-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{145, 13}, {290, 62}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -4}</string>
+			<key>spriteSize</key>
+			<string>{290, 62}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1141, 1083}, {290, 62}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>newgame7-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{107, 14}, {366, 52}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{366, 52}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1666, 2}, {366, 52}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>openFeint-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 6}, {159, 98}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -3}</string>
+			<key>spriteSize</key>
+			<string>{159, 98}</string>
+			<key>spriteSourceSize</key>
+			<string>{159, 104}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1284, 459}, {159, 98}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>pistolet-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {236, 108}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{236, 108}</string>
+			<key>spriteSourceSize</key>
+			<string>{236, 108}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1379, 1184}, {236, 108}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>raiting-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {148, 72}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{148, 72}</string>
+			<key>spriteSourceSize</key>
+			<string>{148, 72}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1141, 1009}, {148, 72}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>raitingLock-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {148, 72}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{148, 72}</string>
+			<key>spriteSourceSize</key>
+			<string>{148, 72}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{910, 205}, {148, 72}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>resume1-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{171, 14}, {238, 52}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{238, 52}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1666, 1238}, {238, 52}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>resume2-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{166, 15}, {248, 50}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{248, 50}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1653, 228}, {248, 50}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>resume3-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{58, 6}, {464, 60}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 4}</string>
+			<key>spriteSize</key>
+			<string>{464, 60}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{2, 1985}, {464, 60}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>resume4-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{126, 7}, {328, 64}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 1}</string>
+			<key>spriteSize</key>
+			<string>{328, 64}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1274, 68}, {328, 64}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>resume5-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{179, 9}, {224, 60}}</string>
+			<key>spriteOffset</key>
+			<string>{1, 1}</string>
+			<key>spriteSize</key>
+			<string>{224, 60}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{754, 1985}, {224, 60}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>resume6-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{91, 8}, {398, 62}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 1}</string>
+			<key>spriteSize</key>
+			<string>{398, 62}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1611, 395}, {398, 62}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>resume7-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{89, 11}, {402, 58}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{402, 58}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1611, 281}, {402, 58}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>sound-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{3, 12}, {98, 92}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -6}</string>
+			<key>spriteSize</key>
+			<string>{98, 92}</string>
+			<key>spriteSourceSize</key>
+			<string>{104, 104}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1335, 989}, {98, 92}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>soundOff-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{3, 12}, {98, 92}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -6}</string>
+			<key>spriteSize</key>
+			<string>{98, 92}</string>
+			<key>spriteSourceSize</key>
+			<string>{104, 104}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1335, 895}, {98, 92}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>square-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 12}, {44, 42}}</string>
+			<key>spriteOffset</key>
+			<string>{-2, -6}</string>
+			<key>spriteSize</key>
+			<string>{44, 42}</string>
+			<key>spriteSourceSize</key>
+			<string>{48, 54}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1611, 112}, {44, 42}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>star-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {236, 108}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{236, 108}</string>
+			<key>spriteSourceSize</key>
+			<string>{236, 108}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1010, 335}, {236, 108}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>store-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {514, 823}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{514, 823}</string>
+			<key>spriteSourceSize</key>
+			<string>{514, 823}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{625, 1028}, {514, 823}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>themes1-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{173, 14}, {234, 52}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{234, 52}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1666, 1466}, {234, 52}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>themes2-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{174, 3}, {234, 62}}</string>
+			<key>spriteOffset</key>
+			<string>{1, 6}</string>
+			<key>spriteSize</key>
+			<string>{234, 62}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1666, 1402}, {234, 62}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>themes3-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{189, 18}, {202, 50}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -3}</string>
+			<key>spriteSize</key>
+			<string>{202, 50}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{910, 153}, {202, 50}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>themes4-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{125, 8}, {330, 64}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{330, 64}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1274, 2}, {330, 64}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>themes5-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{235, 10}, {112, 60}}</string>
+			<key>spriteOffset</key>
+			<string>{1, -0}</string>
+			<key>spriteSize</key>
+			<string>{112, 60}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1438, 1985}, {112, 60}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>themes6-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{237, 10}, {110, 62}}</string>
+			<key>spriteOffset</key>
+			<string>{2, -1}</string>
+			<key>spriteSize</key>
+			<string>{110, 62}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1912, 1186}, {110, 62}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>themes7-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{203, 15}, {172, 50}}</string>
+			<key>spriteOffset</key>
+			<string>{-1, -0}</string>
+			<key>spriteSize</key>
+			<string>{172, 50}</string>
+			<key>spriteSourceSize</key>
+			<string>{580, 80}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1141, 1477}, {172, 50}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>themestore-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {621, 955}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{621, 955}</string>
+			<key>spriteSourceSize</key>
+			<string>{621, 955}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{2, 1028}, {621, 955}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>twitter-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {148, 72}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{148, 72}</string>
+			<key>spriteSourceSize</key>
+			<string>{148, 72}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1141, 1691}, {148, 72}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>twitterLock-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {148, 72}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{148, 72}</string>
+			<key>spriteSourceSize</key>
+			<string>{148, 72}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1291, 1691}, {148, 72}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		<key>twitterMenu-ipad.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{3, 12}, {98, 92}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -6}</string>
+			<key>spriteSize</key>
+			<string>{98, 92}</string>
+			<key>spriteSourceSize</key>
+			<string>{104, 104}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{1335, 801}, {98, 92}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>3</integer>
+		<key>name</key>
+		<string>Untitled-ipad</string>
+		<key>premultipliedAlpha</key>
+		<false/>
+		<key>size</key>
+		<string>{2048, 2048}</string>
+		<key>target</key>
+		<dict>
+			<key>coordinatesFileExtension</key>
+			<string>.plist</string>
+			<key>coordinatesFileName</key>
+			<string>Menu-ipad</string>
+			<key>name</key>
+			<string>default</string>
+			<key>premultipliedAlpha</key>
+			<false/>
+			<key>textureFileExtension</key>
+			<string>.png</string>
+			<key>textureFileName</key>
+			<string>Menu-ipad</string>
+		</dict>
+		<key>version</key>
+		<string>1.5.2</string>
+	</dict>
+</dict>
+</plist>
